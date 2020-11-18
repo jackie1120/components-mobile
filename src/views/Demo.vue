@@ -21,6 +21,8 @@
       v-model="form.picker2"
       :columns=columns2
     />
+    <zv-checkbox-text :list="columns" v-model="form.checkbox" />
+    <zv-checkbox-text :list="columns" v-model="form.checkbox2" valueType="string" />
     <van-button @click="submit">提交</van-button>
   </div>
 </template>
@@ -41,7 +43,9 @@ export default {
       ],
       form: {
         picker: 'B',
-        picker2: '2C'
+        picker2: '2C',
+        checkbox: [],
+        checkbox2: ''
       }
     }
   },

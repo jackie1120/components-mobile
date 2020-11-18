@@ -9,7 +9,7 @@
   :columns=columns
 />
 
- columns2: [
+ columnss: [
   { text: '测试2A', value: '2A' },
   { text: '测试2B', value: '2B' },
   { text: '测试2C', value: '2C' }
