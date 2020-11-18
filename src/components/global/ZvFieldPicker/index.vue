@@ -36,15 +36,14 @@ export default {
       pickerValue: ''
     }
   },
-  // watch: {
-  //   value: {
-  //     immediate: true,
-  //     handler (val) {
-  //       console.log(1111111)
-  //       this.pickerValue = val
-  //     }
-  //   }
-  // },
+  watch: {
+    value: {
+      immediate: true,
+      handler (val) {
+        this.pickerValue = val
+      }
+    }
+  },
   filters: {
     dictionaryTransform (val, columns) {
       if (val === '' || !val) return ''
