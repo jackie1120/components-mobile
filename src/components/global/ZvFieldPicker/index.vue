@@ -7,7 +7,7 @@
       :value="pickerValue | dictionaryTransform(columns)"
       @click="show = true"
     ></van-field>
-    <van-popup v-model="show" position="bottom">
+    <van-popup v-model="show" position="bottom" get-container="body">
       <van-picker
         show-toolbar
         :columns="columns"
