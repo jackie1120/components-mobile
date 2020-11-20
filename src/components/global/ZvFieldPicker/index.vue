@@ -5,7 +5,7 @@
       clickable
       v-bind="$attrs"
       :value="pickerValue | dictionaryTransform(columns)"
-      @click="show = true"
+      @click="showPicker"
     ></van-field>
     <van-popup v-model="show" position="bottom" get-container="body">
       <van-picker
@@ -22,6 +22,10 @@
 export default {
   name: 'ZvFieldPicker',
   props: {
+    readonly: {
+      type: Boolean,
+      default: false
+    },
     columns: {
       type: Array,
       required: true
@@ -56,6 +60,9 @@ export default {
     }
   },
   methods: {
+    showPicker () {
+      if (!this.readonly) this.show = true
+    },
     pickerConfirm (value) {
       this.pickerValue = value.value
       this.show = false
