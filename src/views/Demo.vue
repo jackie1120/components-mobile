@@ -23,6 +23,12 @@
     />
     <zv-checkbox-text :list="columns" v-model="form.checkbox" />
     <zv-checkbox-text :list="columns" v-model="form.checkbox2" valueType="string" />
+    <van-cell center title="开关">
+      <template #right-icon>
+        <zv-switch v-model="form.switch" active-value="01" inactive-value="02" size="24" active-text="开" inactive-text="关" />
+      </template>
+    </van-cell>
+    <div><zv-switch v-model="form.switch2" /></div>
     <van-button @click="submit">提交</van-button>
   </div>
 </template>
@@ -45,7 +51,9 @@ export default {
         picker: 'B',
         picker2: '2C',
         checkbox: [],
-        checkbox2: ''
+        checkbox2: '',
+        switch: '01',
+        switch2: true
       }
     }
   },
