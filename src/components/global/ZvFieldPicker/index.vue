@@ -11,6 +11,7 @@
       <van-picker
         show-toolbar
         :columns="columns"
+        :default-index="index"
         @cancel="show = false"
         @confirm="pickerConfirm($event)"
       ></van-picker>
@@ -38,6 +39,11 @@ export default {
     return {
       show: false,
       pickerValue: ''
+    }
+  },
+  computed: {
+    index () {
+      return this.columns.findIndex(item => item.value === this.value)
     }
   },
   watch: {
