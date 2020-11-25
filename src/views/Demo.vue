@@ -29,6 +29,8 @@
       </template>
     </van-cell>
     <div><zv-switch v-model="form.switch2" /></div>
+    <div><zv-switch1 v-model="form.switch3" size=24 /></div>
+    <div><zv-switch1 v-model="form.switch3" size=24 :show-text=false /></div>
     <van-button @click="submit">提交</van-button>
   </div>
 </template>
@@ -53,7 +55,8 @@ export default {
         checkbox: [],
         checkbox2: '',
         switch: '01',
-        switch2: true
+        switch2: true,
+        switch3: true
       }
     }
   },
